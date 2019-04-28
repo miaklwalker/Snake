@@ -46,4 +46,11 @@ class Vector {
       }
       return this;
   }
+  same(v){
+      if(this.x === v.x && this.y === v.y){
+          return true
+      }else{
+          return false
+      }
+  }
 }

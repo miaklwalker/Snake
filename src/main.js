@@ -20,7 +20,7 @@ player.eat()
 player.loop();
 player.tailShow();
 drawGrid();
-render(draw,5);
+render(draw,10);
 }
 
 function render(name,frameRate){

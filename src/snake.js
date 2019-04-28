@@ -18,7 +18,8 @@ class snake {
   }
 
   move() {
-    this.tail.push(this.headPosition)
+    let old = new Vector(this.headPosition.x,this.headPosition.y);
+    this.tail.unshift(old);
     if (controls.KeyW || controls.ArrowUp) {
       this.velocity.x = 0;
       this.velocity.y = -1;
@@ -34,14 +35,14 @@ class snake {
     }
     this.tail.pop();
    this.headPosition.add(this.velocity);
-   this.tail.unshift(this.headPosition);
+   
   }
   eat() {
     if (
       this.headPosition.x === apple.position.x &&
       this.headPosition.y === apple.position.y
     ) {
-      this.tail.push(this.headPosition)
+      this.tail.unshift(this.headPosition)
       this.tailLength++
       apple.refill();
     }
