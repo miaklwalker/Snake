@@ -11,8 +11,6 @@ let controls = {
     document.addEventListener('keydown',event=>{ 
       if(Object.keys(this).indexOf(`${event.code}`) !== -1){
       event.preventDefault()
-      console.log(this[event.code])
-      console.log(player.headPosition);
       this[event.code]=true;
       }
     })
@@ -21,7 +19,6 @@ let controls = {
       if(Object.keys(this).indexOf(`${event.code}`) !== -1){
         event.preventDefault()
         this[event.code]=false;
-        console.log(this[event.code])
     }
   })
   }

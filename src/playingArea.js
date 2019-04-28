@@ -17,13 +17,13 @@ function makeBackground(color){
 
 function drawGrid(){
   ctx.strokeStyle = "white";
-  for (let i = 0 ;  i <= canvas.width ; i+=canvas.width/20){
+  for (let i = 0 ;  i <= canvas.width ; i+=canvas.width/numOfCells){
     ctx.beginPath();
     ctx.lineTo(i,0);
     ctx.lineTo(i,canvas.height);
     ctx.stroke();
   }
-  for (let j = 0 ; j <= canvas.height ; j+=canvas.height/20){
+  for (let j = 0 ; j <= canvas.height ; j+=canvas.height/numOfCells){
     ctx.beginPath();
     ctx.moveTo(0,j);
     ctx.lineTo(canvas.width,j);
