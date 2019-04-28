@@ -1,0 +1,45 @@
+*{
+  text-align: center;
+}
+.container{
+  background:green;
+  display:grid;
+  grid-template-columns: 1fr .6fr 1fr;
+  grid-template-rows: .2fr 1fr .5fr 1fr;
+  grid-template-areas: "Title Title Title"
+              "Links game Navigation"
+              ". Instructions ."
+              ". . .";
+
+}
+.Title{
+  font-size: 250%;
+font-weight: bolder;
+  grid-area: Title;
+}
+
+.Instructions{
+
+  grid-area: Instructions;
+}
+
+.Navigation{
+
+  grid-area: Navigation;
+}
+
+.Links{
+  text-align: left;
+  display:grid;
+  grid-template-columns: .2fr 1fr .2fr;
+  grid-template-areas: " . info .";
+
+  grid-area: Links;
+}
+.info{
+  text-align: left;
+  grid-area: info;
+}
+.game{
+  grid-area: game;
+}
