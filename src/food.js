@@ -6,8 +6,8 @@ class food {
     let newX = Math.floor(Math.random() * 19);
     let newY = Math.floor(Math.random() * 19);
     if (player.tail.forEach(tail => tail.same(new Vector(newX, newY)))) {
-      newX = Math.floor(Math.random() * 19);
-      newY = Math.floor(Math.random() * 19);
+      newX = Math.floor(Math.random()*Math.floor(Math.random()/Math.floor(Math.random() * 19)));
+      newY = Math.floor(Math.random()*Math.floor(Math.random()/Math.floor(Math.random() * 19)));
       this.position.x = newX;
       this.position.y = newY;
     } else {
